@@ -38,4 +38,35 @@ Rabbit test subjects
         (int) 90
 */
 public class RabbitTestSubjects {
+    public static int answer(double[] y, double[] x) {
+
+        /*
+        Regardless of the order of the measurements, the overall improvement percentage won't change. So we can simply add both arrays up and make a comparison
+        on the totals instead of individual measurements.
+         */
+
+        double totalY = 0;
+        for(double d: y){
+            totalY += d;
+        }
+
+        double totalX = 0;
+        for(double d: x){
+            totalX +=d ;
+        }
+
+
+        /*
+        Here I calculate the improvement. This will result in a decimal double such as "0.9" and it needs to be converted to an absolute integer between 1-100
+         */
+        double raw = (totalX-totalY)/totalX;
+
+
+        /*
+        Raw improvement gets converted to an absolute integer. By multiplying the raw improvement by 100 we convert it to a value between 1-100. Ex: 0.759112 X 100 = 75.9112
+        Then we simply round that into the nearest integer by adding 0.5 and rounding it down via integer parsing.
+         */
+        return (int) ((raw*100) + 0.5);
+    }
+
 }
