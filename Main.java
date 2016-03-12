@@ -12,11 +12,13 @@ This is the main class that will call contain and call all the answer() methods 
 
 public class Main {
     public static void main (String[] arg) {
-        double[] y = new double[]{2.2999999999999998, 15.0, 102.40000000000001, 3486.8000000000002};
-        double[] x = new double[]{23.0, 150.0, 1024.0, 34868.0};
-
-
-        int answer = RabbitTestSubjects.answer(y,x);
-        System.out.println(answer);
+        int[][] test= new int[][]{{1, 2, 3}, {2, 3, 4}, {3, 2, 1}};
+        test = ZombitInfection.answer(test,0,0,2);
+        for(int i =0;i<test.length;i++){
+            for(int k = 0;k<test[0].length;k++){
+                System.out.print(test[i][k]);
+            }
+            System.out.println("");
+        }
     }
 }
