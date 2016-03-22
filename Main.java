@@ -13,7 +13,8 @@ This is the main class that will call contain and call all the answer() methods 
 public class Main {
     public static void main (String[] arg) {
 
-        System.out.println(SquareSupplies.answer(20));
+        //System.out.println(MinionsBoredGame.answer(1,2));
+        System.out.println(MinionsBoredGame.answer(3,2));
 
     }
 }
